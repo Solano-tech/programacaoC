@@ -7,7 +7,8 @@ int main(){
 //    int nota1, nota2, nota3;
     float nota1, nota2, nota3;
     float media;
-    char* resultado;
+    char resultado;
+    char opcao;
 
     printf("*** Cálculo da Média ***\n");
     
@@ -33,11 +34,26 @@ int main(){
     //    printf("Reprovado!");
     //}
 
+    printf("Escolha uma opção: ");
+    scanf(" %c", &opcao);
+
     switch(opcao){
-        case 'M'
-        case 'm'
-            \\codigo
+        case 'm':
+        //case 'M':
+            printf("Vc escolheu maior\n");
         break;
+        case 'n':
+        //case 'N':
+            printf("Vc escolheu menor\n");
+        break;
+        case 's':
+        //case 'S':
+            printf("Saindo... \n"); //digo
+        break;
+        default:
+            printf("Opcao invalida\n");
+        break;
+
     }
 
     return 0;
