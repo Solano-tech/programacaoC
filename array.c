@@ -21,8 +21,8 @@ int main()
 
     printf("As notas do %s são: %s , %s \n", nomeAlunos[index][0], nomeAlunos[index][1],nomeAlunos[index][2]);
     */
-    int i, j;
-    int tabuleiro[10][11] = {
+    int i, j, li, lf, ci, cf, lfixa, cfixa;
+    /*int tabuleiro[10][11] = {
     {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
     {2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
     {3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -33,13 +33,46 @@ int main()
     {8, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0},
     {9, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0},
     {10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
-    };
+    };*/
+    li = 3;
+    lf = li+3;
+    ci = 2;
+    cf = ci+3;
+    lfixa = 5;
+    cfixa = 5;
 
+    int tabule[10][10];
+
+    for (i=0; i<10; i++)
+    {
+        for (j=0; j<10; j++)
+        {
+            if (j == cfixa && i >= li && i < lf)
+            {
+                tabule[i][j] = 3; // navio na vertical
+            } else if (i == lfixa && j>= ci && j < cf){
+                tabule[i][j] = 3; // navio na horizontal
+            } else{
+                tabule[i][j] = 0;
+            }
+        }
+            
+        printf("\n");
+    }
+    
+    //posicinar navio na horizontal
+    // escolher posicao inicial
+    //for (j=3; j<(j+3); j++)
+    //{
+    //    tabule[4][j] = 3;
+    //}
+    
+    
     for (i = 0; i < 10; i++)
     {
-        for (j = 0; j < 11; j++)
+        for (j = 0; j < 10; j++)
         {
-            printf("%d ", tabuleiro[i][j]);
+            printf("%d ", tabule[i][j]);
         }
         printf("\n");
     }
